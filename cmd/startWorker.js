@@ -2,11 +2,13 @@ const StepFunctionWorker = require('step-function-worker');
 const ACTIVITY_ARN = process.env.ACTIVITY_ARN;
 
 const fn = function(input, cb, heartbeat) {
+  
+  console.log(" input.number ========-", input);
   // setTimeout(() => {
   //   cb(null, {"foo" : "bar"}); // 先にtimeoutしたら cbは機能しない。 => Retry設定があれば, Retryされる。
   // }, 1000 * 35);
   // throw new Error("Something Wrong"); // Retroy Policy に States.TaskFailed が設定されていれば, Retryされる。
-  cb(null, {"foo" : "bar"});
+  cb(null, { number : input.number });
 };
  
 const worker = new StepFunctionWorker({

@@ -7,6 +7,7 @@ const StepFnService = require('../lib/stepFn.js');
   const payload = {
     arg1: "Hello",
     arg2: "World",
+    number: 2,
     name: String(name)
   }
   try {
