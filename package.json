@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:server": "node cmd/rest_server.js", 
     "start:worker": "node cmd/startWorker.js",
     "start:exec": "node cmd/startExec.js"
   },
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.939.0",
+    "express": "^4.17.1",
     "step-function-worker": "^2.1.0",
     "uuid": "^8.3.2"
   }
